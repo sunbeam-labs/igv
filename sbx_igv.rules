@@ -2,16 +2,7 @@ from pathlib import Path
 
 
 import sbx_igv
-from sunbeamlib import build_sample_list, read_seq_ids
 from sunbeamlib.config import *
-
-Cfg = check_config(config)
-
-Samples = build_sample_list(
-        Cfg['all']['data_fp'],
-        Cfg['all']['filename_fmt'],
-        Cfg['all']['samplelist_fp'],
-        Cfg['all']['exclude'])
 
 MAPPING_FP = output_subdir(Cfg, 'mapping')
 
