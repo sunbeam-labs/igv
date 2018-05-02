@@ -31,7 +31,7 @@ rule igv_snapshot:
         bais=expand(str(MAPPING_FP/"{{genome}}"/"{sample}.bam.bai"), sample=Samples.keys())
     params:
         segment="{segment}",
-        igv_prefs=Cfg['mapping']['igv_prefs']
+        igv_prefs=Cfg['sbx_igv']['igv_prefs']
     output:
         png=str(MAPPING_FP/"{genome}-{segment}.alignment.png")
     run:
